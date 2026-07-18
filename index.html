@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Maşın Yarışı 🚗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="gameContainer">
+
+    <div id="rotateOverlay" class="rotate-overlay">
+      <div class="rotate-icon">📱</div>
+      <p>Daha yaxşı təcrübə üçün<br>telefonunuzu üfüqi (yan) çevirin</p>
+    </div>
+
+    <div id="menuScreen" class="screen">
+      <canvas id="menuStarCanvas"></canvas>
+      <h1 class="menu-title">🚗 Maşın Yarışı</h1>
+      <p class="menu-highscore">Ən Yüksək Bal: <span id="menuHighScore">0</span></p>
+      <button id="playBtn" class="menuBtn primary">▶ Oyuna Başla</button>
+      <button id="shopBtn" class="menuBtn">🛒 Mağaza</button>
+    </div>
+
+    <div id="shopScreen" class="screen hidden">
+      <h1 class="shop-title">🛒 Mağaza</h1>
+      <p class="shop-balance">Balans: <span id="shopBalance">0</span> 💰</p>
+      <div id="carList" class="car-list"></div>
+      <button id="shopBackBtn" class="menuBtn">◀ Menyuya Qayıt</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="envToast" class="env-toast hidden"></div>
+
+    <div id="scoreBoard" class="hidden">
+      Xal: <span id="scoreValue">0</span>
+      <span class="hs-inline">🏆 <span id="liveHighScore">0</span></span>
+    </div>
+
+    <div id="abilityWrap" class="hidden">
+      <button id="abilityBtn" class="hidden">
+        <span id="abilityIcon">🛡️</span>
+        <span id="abilityCountdown" class="ability-countdown hidden">20</span>
+      </button>
+    </div>
+
+    <div id="controls" class="hidden">
+      <button id="leftBtn" class="ctrlBtn">◀</button>
+      <button id="rightBtn" class="ctrlBtn">▶</button>
+    </div>
+
+    <div id="gameOverScreen" class="screen hidden">
+      <h1>💥 Qəza!</h1>
+      <p class="finalScoreText">Xalın: <span id="finalScore">0</span></p>
+      <p class="highScoreText">🏆 Ən Yüksək Bal: <span id="gameOverHighScore">0</span></p>
+      <p id="newRecordText" class="new-record hidden">🎉 YENİ REKORD! 🎉</p>
+      <button id="restartBtn" class="menuBtn primary">🔁 Yenidən Başla</button>
+      <button id="menuBtn2" class="menuBtn">🏠 Ana Menyu</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
